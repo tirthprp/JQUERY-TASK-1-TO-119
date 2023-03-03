@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+
+    <!-- Basic inline styling -->
+    <style>
+        body {
+            text-align: center;
+        }
+        
+        h1 {
+            color: green;
+            font-size: 40px;
+        }
+        
+        p {
+            font-size: 25px;
+            font-weight: bold;
+        }
+        
+        button {
+            display: block;
+            cursor: pointer;
+            margin: 5rem auto 0 auto;
+        }
+        
+        select {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>GeeksforGeeks</h1>
+    <p>
+        jQuery - Remove all options of select box then add one option and select it
+    </p>
+
+    <select id="geek-select">
+	<option value="geek1">GEEK 1</option>
+	<option value="geek2">GEEK 2</option>
+	<option value="geek3">GEEK 3</option>
+	<option value="geek4">GEEK 4</option>
+	</select>
+    <button onclick="removeThenAdd()">
+	Click me to remove all options and then add one option
+	</button>
+    <script type="text/javascript">
+        function removeThenAdd() {
+            $("#geek-select").find("option").remove().end().append(
+                '<option value = "gfg">GeeksForGeeks</option>');
+        }
+    </script>
+</body>
+
+</html>

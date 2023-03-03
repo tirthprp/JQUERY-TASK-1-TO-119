@@ -1,0 +1,28 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js">
+</script>
+<h1 style="color:green;">
+    GeeksforGeeks
+</h1>
+<p id="GFG_UP">
+</p>
+<p id="GFG_UP2">
+</p>
+<button>
+	click here
+</button>
+<p id="GFG_DOWN">
+</p>
+<script>
+    $('#GFG_UP')
+        .text('Click the button to serialize the object to query string');
+    var data = {
+        param1: 'val_1',
+        param2: 'val_2',
+        param3: 'val_3'
+    };
+    $('#GFG_UP2').text(JSON.stringify(data));
+    $('button').on('click', function() {
+        var result = $.param(data);
+        $('#GFG_DOWN').text(result);
+    });
+</script>
