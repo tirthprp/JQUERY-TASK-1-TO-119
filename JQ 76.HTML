@@ -1,0 +1,177 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Live Demo: jQuery Set Element's Attribute Value</title>
+    <meta name="description" content="Try and test HTML code online in a simple and easy way using our free HTML editor and see the results in real-time." />
+    <meta charset="UTF-8" />
+    <meta property="og:title" content="jQuery Set Element's Attribute Value" />
+    <meta property="og:description" content="View the live example as well as try and test it using the online HTML editor." />
+    <meta property="fb:admins" content="100001054961582" />
+    <meta property="fb:app_id" content="1404574483159557" />
+    <meta property="og:image" content="/lib/images/signature.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link type="image/x-icon" href="/favicon.ico" rel="shortcut icon" />
+    <link rel="stylesheet" href="/lib/editor-5.5/css/codemirror.css" />
+    <link rel="stylesheet" href="/lib/icomoon/style.css">
+    <link rel="stylesheet" href="/lib/editor-5.5/css/default-1.4.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="/lib/editor-5.5/js/codemirror.js"></script>
+    <script src="/lib/editor-5.5/js/utility.js"></script>
+    <script src="/lib/editor-5.5/mode/xml.js"></script>
+    <script src="/lib/editor-5.5/mode/javascript.js"></script>
+    <script src="/lib/editor-5.5/mode/css.js"></script>
+    <script src="/lib/editor-5.5/mode/htmlmixed.js"></script>
+    <script src="/lib/editor-5.5/js/active-line.js"></script>
+    <script>
+        $(document).ready(function() {
+            updatePreview();
+        });
+    </script>
+    <style>
+        .CodeMirror {
+            font-size: 15px;
+            line-height: normal;
+            font-family: consolas, monospace;
+            background: url("/lib/images/gutter-bg.gif") repeat-y -26px 0 transparent;
+        }
+        
+        .CodeMirror-activeline-background {
+            background: #e8f2ff !important;
+        }
+        
+        .CodeMirror-scroll {
+            overflow: auto;
+        }
+        
+        #carbonads {
+            border: none !important;
+        }
+    </style>
+    <!--Google Analytics-->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-381VQH4NHT"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-381VQH4NHT');
+    </script>
+    <!--End:Google Analytics-->
+</head>
+
+<body>
+    <div class="header-wrapper">
+        <div class="header clearfix">
+            <div class="top-ad-box">
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9107540490929984" crossorigin="anonymous"></script>
+                <!-- Responsive Leaderboard -->
+                <ins class="adsbygoogle" style="display:block;width:100%;max-width:728px;height:90px" data-ad-client="ca-pub-9107540490929984" data-ad-slot="4302666817"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+            <div class="logo">
+                <img src="lib/images/codelab-logo.svg" alt="CodeLab" />
+            </div>
+            <div class="control-bar">
+                <div class="buttons">
+                    <a onClick="updatePreview();" class="show-output">Show Output</a>
+                    <a onClick="newWindow();" class="new-window" title="Show Output in Blank Tab"><span class="icon-new-window"></span></a>
+                    <a onClick="downloadCode();" class="download-code" title="Download Source Code"><span class="icon-download"></span></a>
+                    <a onClick="toggleView();" class="toggle-view" title="Change Editor Layout"><span class="icon-screen-rotation"></span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="frame-box vr">
+        <div class="pane-wrapper clearfix">
+            <div class="pane" id="code-pane">
+                <div class="outer-area">
+                    <span class="show-preview-pane">&nbsp;</span>
+                    <div class="inner-area">
+                        <input type="hidden" id="current-code" name="current-code" />
+                        <textarea id="code" name="code">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;title&gt;jQuery Set Element's Attribute Value&lt;/title&gt;
+&lt;script src=&quot;https://code.jquery.com/jquery-3.5.1.min.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+$(document).ready(function(){
+    $(&quot;button&quot;).click(function(){
+        $('input[type=&quot;checkbox&quot;]').attr(&quot;checked&quot;, &quot;checked&quot;);
+    });
+});
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;p&gt;&lt;label&gt;&lt;input type=&quot;checkbox&quot;&gt;&lt;/label&gt; I agree with terms and conditions.&lt;/p&gt;
+    &lt;button type=&quot;button&quot;&gt;Check&lt;/button&gt;
+&lt;/body&gt;
+&lt;/html&gt;</textarea>
+                        <script>
+                            var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+                                mode: "text/html",
+                                tabMode: "indent",
+                                styleActiveLine: true,
+                                lineNumbers: true,
+                                lineWrapping: true
+                            });
+                        </script>
+                    </div>
+                </div>
+            </div>
+            <div class="pane" id="preview-pane">
+                <div class="outer-wrapper">
+                    <span class="hide-preview-pane">&nbsp;</span>
+                    <div class="output-area">
+                        <iframe id="preview" name="preview"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="codelab-footer clearfix">
+        <a href="/codelab.php?topic=sql&amp;file=select-all" class="switch-mode">Switch to SQL Mode</a>
+        <label class="auto-update"><input type="checkbox" id="check" /> Auto update</label>
+        <script>
+            var delay;
+            var checkbox = document.getElementById("check");
+            editor.on("change", function() {
+                editor.refresh();
+                if (checkbox.checked == true) {
+                    clearTimeout(delay);
+                    delay = setTimeout(updatePreview, 300); // Don't use parenthesis 
+                }
+            });
+            //setTimeout(updatePreview, 300);
+        </script>
+        <div class="social-widget-wrapper">
+            <!-- Social widget -->
+            <p class="social-link">Share this example with
+                <a id="facebook-share-btn" href="https://facebook.com/sharer.php?u=https://www.tutorialrepublic.com%2Fcodelab.php%3Ftopic%3Djquery%26file%3Dset-an-attribute-for-elements" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600,top=150, left='+((screen.width/2)-300));return false;">Facebook</a>,
+                <a id="twitter-share-btn" href="https://twitter.com/share?text=jQuery+Set+Element%27s+Attribute+Value+-+&amp;url=https://www.tutorialrepublic.com%2Fcodelab.php%3Ftopic%3Djquery%26file%3Dset-an-attribute-for-elements" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600,top=150, left='+((screen.width/2)-300));return false;">Twitter</a>,
+                <a id="google-share-btn" href="https://mail.google.com/mail/?view=cm&fs=1&su=jQuery+Set+Element%27s+Attribute+Value&amp;body=https://www.tutorialrepublic.com%2Fcodelab.php%3Ftopic%3Djquery%26file%3Dset-an-attribute-for-elements" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=438,width=600,top=150, left='+((screen.width/2)-300));return false;">Gmail</a>.
+                Please give us a
+                <a id="facebook-like-btn" href="/like.php" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=250,width=600,top=150, left='+((screen.width/2)-300));return false;">Like</a>, if you
+                find it helpful.
+            </p>
+            <!-- End:Social widget -->
+        </div>
+    </div>
+
+    <form id="download-form" action="examples/bin/download.php" method="post" class="hidden-form">
+        <input type="hidden" id="download-value" name="download-value" />
+    </form>
+    <form id="fullscreen-form" action="examples/fullscreen/output.php" method="post" target="_blank" class="hidden-form">
+        <input type="hidden" id="code-value" name="code-value" />
+    </form>
+
+</body>
+
+</html>

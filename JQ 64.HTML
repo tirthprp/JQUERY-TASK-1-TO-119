@@ -1,0 +1,382 @@
+
+<!DOCTYPE html>
+<!-- saved from url=(0107)https://www.tutorialrepublic.com/codelab.php?topic=jquery&file=animate-css-property-with-pre-defined-values -->
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Live Demo: Example of jQuery Animation with Pre-defined Values</title>
+    <meta name="description" content="Try and test HTML code online in a simple and easy way using our free HTML editor and see the results in real-time.">
+
+    <meta property="og:title" content="Example of jQuery Animation with Pre-defined Values">
+    <meta property="og:description" content="See live example at - https://www.tutorialrepublic.com/codelab.php?topic=jquery&amp;file=animate-css-property-with-pre-defined-values">
+    <meta property="fb:admins" content="100001054961582">
+    <meta property="fb:app_id" content="1404574483159557">
+    <meta property="og:image" content="/lib/images/signature.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="image/x-icon" href="https://www.tutorialrepublic.com/favicon.ico" rel="shortcut icon">
+    <link rel="stylesheet" href="./code64_files/codemirror.css">
+    <link rel="stylesheet" href="./code64_files/style.css">
+    <link rel="stylesheet" href="./code64_files/default-1.4.css">
+    <script src="./code64_files/f.txt"></script>
+    <script src="./code64_files/f(1).txt" id="google_shimpl"></script>
+    <script src="./code64_files/jquery.min.js.download"></script>
+    <script src="./code64_files/codemirror.js.download"></script>
+    <script src="./code64_files/utility.js.download"></script>
+    <script src="./code64_files/xml.js.download"></script>
+    <script src="./code64_files/javascript.js.download"></script>
+    <script src="./code64_files/css.js.download"></script>
+    <script src="./code64_files/htmlmixed.js.download"></script>
+    <script src="./code64_files/active-line.js.download"></script>
+    <script>
+        $(document).ready(function() {
+            updatePreview();
+        });
+    </script>
+    <style>
+        .CodeMirror {
+            font-size: 15px;
+            line-height: normal;
+            font-family: consolas, monospace;
+            background: url("/lib/images/gutter-bg.gif") repeat-y -26px 0 transparent;
+        }
+        
+        .CodeMirror-activeline-background {
+            background: #e8f2ff !important;
+        }
+        
+        .CodeMirror-scroll {
+            overflow: auto;
+        }
+        
+        #carbonads {
+            border: none !important;
+        }
+    </style>
+    <!--Google Analytics-->
+    <script async="" src="./code64_files/js"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-381VQH4NHT');
+    </script>
+    <!--End:Google Analytics-->
+    <meta http-equiv="origin-trial" content="Az6AfRvI8mo7yiW5fLfj04W21t0ig6aMsGYpIqMTaX60H+b0DkO1uDr+7BrzMcimWzv/X7SXR8jI+uvbV0IJlwYAAACFeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjgwNjUyNzk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ==">
+    <meta http-equiv="origin-trial" content="A+USTya+tNvDPaxUgJooz+LaVk5hPoAxpLvSxjogX4Mk8awCTQ9iop6zJ9d5ldgU7WmHqBlnQB41LHHRFxoaBwoAAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjgwNjUyNzk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ==">
+    <meta http-equiv="origin-trial" content="A7FovoGr67TUBYbnY+Z0IKoJbbmRmB8fCyirUGHavNDtD91CiGyHHSA2hDG9r9T3NjUKFi6egL3RbgTwhhcVDwUAAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjgwNjUyNzk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ==">
+    <link rel="preload" href="./code64_files/f(2).txt" as="script">
+    <script type="text/javascript" src="./code64_files/f(2).txt"></script>
+    <link rel="preload" href="./code64_files/f(3).txt" as="script">
+    <script type="text/javascript" src="./code64_files/f(3).txt"></script>
+</head>
+
+<body>
+    <div class="header-wrapper">
+        <div class="header clearfix">
+            <div class="top-ad-box">
+                <script async="" src="./code64_files/f(4).txt" crossorigin="anonymous" data-checked-head="true"></script>
+                <!-- Responsive Leaderboard -->
+                <ins class="adsbygoogle" style="display: block; width: 728px; max-width: 728px; height: 90px;" data-ad-client="ca-pub-9107540490929984" data-ad-slot="4302666817" data-adsbygoogle-status="done" data-ad-status="filled"><div id="aswift_1_host" tabindex="0" title="Advertisement" aria-label="Advertisement" style="border: none; height: 90px; width: 728px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block;"><iframe id="aswift_1" name="aswift_1" style="left:0;position:absolute;top:0;border:0;width:728px;height:90px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="728" height="90" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="./code64_files/ads.html" data-google-container-id="a!2" data-google-query-id="CIHD0cKuvf0CFTZgDwId2DsGlA" data-load-complete="true"></iframe></div></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+            <div class="logo">
+                <img src="./code64_files/codelab-logo.svg" alt="CodeLab">
+            </div>
+            <div class="control-bar">
+                <div class="buttons">
+                    <a onclick="updatePreview();" class="show-output">Show Output</a>
+                    <a onclick="newWindow();" class="new-window" title="Show Output in Blank Tab"><span class="icon-new-window"></span></a>
+                    <a onclick="downloadCode();" class="download-code" title="Download Source Code"><span class="icon-download"></span></a>
+                    <a onclick="toggleView();" class="toggle-view" title="Change Editor Layout"><span class="icon-screen-rotation"></span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="frame-box vr">
+        <div class="pane-wrapper clearfix">
+            <div class="pane" id="code-pane">
+                <div class="outer-area">
+                    <span class="show-preview-pane">&nbsp;</span>
+                    <div class="inner-area">
+                        <input type="hidden" id="current-code" name="current-code">
+                        <textarea id="code" name="code" style="display: none;">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+&lt;meta charset="utf-8"&gt;
+&lt;title&gt;Example of jQuery Animation with Pre-defined Values&lt;/title&gt;
+&lt;script src="https://code.jquery.com/jquery-3.5.1.min.js"&gt;&lt;/script&gt;
+&lt;style&gt;
+    .box{
+        width: 80%;
+        height: 200px;
+        background: #9d7ede;
+        margin-top: 30px;
+    }
+&lt;/style&gt;
+&lt;script&gt;
+$(document).ready(function(){
+    $("button").click(function(){
+        $(".box").animate({
+            width: 'toggle'
+        });
+    });
+});
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;button type="button"&gt;Toggle Animation&lt;/button&gt;
+    &lt;div class="box"&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</textarea>
+                        <div class="CodeMirror cm-s-default CodeMirror-wrap" style="height: 606px;">
+                            <div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 4px; left: 34px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div>
+                            <div class="CodeMirror-vscrollbar"
+                                tabindex="-1" cm-not-content="true" style="bottom: 0px;">
+                                <div style="min-width: 1px; height: 0px;"></div>
+                            </div>
+                            <div class="CodeMirror-hscrollbar" tabindex="-1" cm-not-content="true">
+                                <div style="height: 100%; min-height: 1px; width: 0px;"></div>
+                            </div>
+                            <div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div>
+                            <div class="CodeMirror-gutter-filler" cm-not-content="true"></div>
+                            <div class="CodeMirror-scroll" tabindex="-1">
+                                <div class="CodeMirror-sizer" style="margin-left: 30px; margin-bottom: -17px; border-right-width: 33px; min-height: 518px; padding-right: 0px; padding-bottom: 0px;">
+                                    <div style="position: relative; top: 0px;">
+                                        <div class="CodeMirror-lines" role="presentation">
+                                            <div role="presentation" style="position: relative; outline: none;">
+                                                <div class="CodeMirror-measure"><pre class="CodeMirror-line-like"><span>xxxxxxxxxx</span></pre>
+                                                    <div class="CodeMirror-linenumber CodeMirror-gutter-elt">
+                                                        <div>29</div>
+                                                    </div>
+                                                </div>
+                                                <div class="CodeMirror-measure"></div>
+                                                <div style="position: relative; z-index: 1;"></div>
+                                                <div class="CodeMirror-cursors">
+                                                    <div class="CodeMirror-cursor" style="left: 4px; top: 0px; height: 17.6px;">&nbsp;</div>
+                                                </div>
+                                                <div class="CodeMirror-code" role="presentation" style="">
+                                                    <div class="CodeMirror-activeline" style="position: relative;">
+                                                        <div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
+                                                        <div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: -30px; width: 30px;"></div>
+                                                        <div class="CodeMirror-gutter-wrapper CodeMirror-activeline-gutter" style="left: -30px;">
+                                                            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">1</div>
+                                                        </div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-meta">&lt;!DOCTYPE html&gt;</span></span></pre></div>
+                                                    <div style="position: relative;">
+                                                        <div class="CodeMirror-gutter-wrapper" style="left: -30px;">
+                                                            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">2</div>
+                                                        </div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">html</span> <span class="cm-attribute">lang</span>=<span class="cm-string">"en"</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div>
+                                                    <div
+                                                        style="position: relative;">
+                                                        <div class="CodeMirror-gutter-wrapper" style="left: -30px;">
+                                                            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">3</div>
+                                                        </div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">head</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div>
+                                                <div
+                                                    style="position: relative;">
+                                                    <div class="CodeMirror-gutter-wrapper" style="left: -30px;">
+                                                        <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">4</div>
+                                                    </div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">meta</span> <span class="cm-attribute">charset</span>=<span class="cm-string">"utf-8"</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div>
+                                            <div
+                                                style="position: relative;">
+                                                <div class="CodeMirror-gutter-wrapper" style="left: -30px;">
+                                                    <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">5</div>
+                                                </div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">title</span><span class="cm-tag cm-bracket">&gt;</span>Example of jQuery Animation with Pre-defined Values<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">title</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div>
+                                        <div
+                                            style="position: relative;">
+                                            <div class="CodeMirror-gutter-wrapper" style="left: -30px;">
+                                                <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">6</div>
+                                            </div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">script</span> <span class="cm-attribute">src</span>=<span class="cm-string">"https://code.jquery.com/jquery-3.5.1.min.js"</span><span class="cm-tag cm-bracket">&gt;&lt;/</span><span class="cm-tag">script</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div>
+                                    <div
+                                        style="position: relative;">
+                                        <div class="CodeMirror-gutter-wrapper" style="left: -30px;">
+                                            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">7</div>
+                                        </div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">style</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div>
+                                <div
+                                    style="position: relative;">
+                                    <div class="CodeMirror-gutter-wrapper" style="left: -30px;">
+                                        <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">8</div>
+                                    </div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-qualifier">.box</span>{</span></pre></div>
+                            <div style="position: relative;">
+                                <div class="CodeMirror-gutter-wrapper" style="left: -30px;">
+                                    <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">9</div>
+                                </div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-property">width</span>: <span class="cm-number">80%</span>;</span></pre></div>
+                            <div
+                                style="position: relative;">
+                                <div class="CodeMirror-gutter-wrapper" style="left: -30px;">
+                                    <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">10</div>
+                                </div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-property">height</span>: <span class="cm-number">200px</span>;</span></pre></div>
+                        <div
+                            style="position: relative;">
+                            <div class="CodeMirror-gutter-wrapper" style="left: -30px;">
+                                <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">11</div>
+                            </div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-property">background</span>: <span class="cm-atom">#9d7ede</span>;</span></pre></div>
+                    <div
+                        style="position: relative;">
+                        <div class="CodeMirror-gutter-wrapper" style="left: -30px;">
+                            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">12</div>
+                        </div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-property">margin-top</span>: <span class="cm-number">30px</span>;</span></pre></div>
+                <div
+                    style="position: relative;">
+                    <div class="CodeMirror-gutter-wrapper" style="left: -30px;">
+                        <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">13</div>
+                    </div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  }</span></pre></div>
+            <div style="position: relative;">
+                <div class="CodeMirror-gutter-wrapper" style="left: -30px;">
+                    <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">14</div>
+                </div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">style</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div>
+            <div
+                style="position: relative;">
+                <div class="CodeMirror-gutter-wrapper" style="left: -30px;">
+                    <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">15</div>
+                </div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">script</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div>
+        <div
+            style="position: relative;">
+            <div class="CodeMirror-gutter-wrapper" style="left: -30px;">
+                <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">16</div>
+            </div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">$</span>(<span class="cm-variable">document</span>).<span class="cm-property">ready</span>(<span class="cm-keyword">function</span>(){</span></pre></div>
+    <div
+        style="position: relative;">
+        <div class="CodeMirror-gutter-wrapper" style="left: -30px;">
+            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">17</div>
+        </div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-variable">$</span>(<span class="cm-string">"button"</span>).<span class="cm-property">click</span>(<span class="cm-keyword">function</span>(){</span></pre></div>
+        <div
+            style="position: relative;">
+            <div class="CodeMirror-gutter-wrapper" style="left: -30px;">
+                <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">18</div>
+            </div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable">$</span>(<span class="cm-string">".box"</span>).<span class="cm-property">animate</span>({</span></pre></div>
+            <div
+                style="position: relative;">
+                <div class="CodeMirror-gutter-wrapper" style="left: -30px;">
+                    <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">19</div>
+                </div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-property">width</span>: <span class="cm-string">'toggle'</span></span></pre></div>
+                <div
+                    style="position: relative;">
+                    <div class="CodeMirror-gutter-wrapper" style="left: -30px;">
+                        <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">20</div>
+                    </div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp;  });</span></pre></div>
+                    <div style="position: relative;">
+                        <div class="CodeMirror-gutter-wrapper" style="left: -30px;">
+                            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">21</div>
+                        </div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  });</span></pre></div>
+                    <div style="position: relative;">
+                        <div class="CodeMirror-gutter-wrapper" style="left: -30px;">
+                            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">22</div>
+                        </div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">});</span></pre></div>
+                    <div style="position: relative;">
+                        <div class="CodeMirror-gutter-wrapper" style="left: -30px;">
+                            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">23</div>
+                        </div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">script</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div>
+                    <div
+                        style="position: relative;">
+                        <div class="CodeMirror-gutter-wrapper" style="left: -30px;">
+                            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">24</div>
+                        </div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">head</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div>
+                        <div
+                            style="position: relative;">
+                            <div class="CodeMirror-gutter-wrapper" style="left: -30px;">
+                                <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">25</div>
+                            </div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">body</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div>
+                            <div
+                                style="position: relative;">
+                                <div class="CodeMirror-gutter-wrapper" style="left: -30px;">
+                                    <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">26</div>
+                                </div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">button</span> <span class="cm-attribute">type</span>=<span class="cm-string">"button"</span><span class="cm-tag cm-bracket">&gt;</span>Toggle Animation<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">button</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div>
+                                <div
+                                    style="position: relative;">
+                                    <div class="CodeMirror-gutter-wrapper" style="left: -30px;">
+                                        <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">27</div>
+                                    </div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"box"</span><span class="cm-tag cm-bracket">&gt;&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div>
+                                    <div
+                                        style="position: relative;">
+                                        <div class="CodeMirror-gutter-wrapper" style="left: -30px;">
+                                            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">28</div>
+                                        </div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">body</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div>
+                                        <div
+                                            style="position: relative;">
+                                            <div class="CodeMirror-gutter-wrapper" style="left: -30px;">
+                                                <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">29</div>
+                                            </div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">html</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div>
+                                            </div>
+                                            </div>
+                                            </div>
+                                            </div>
+                                            </div>
+                                            <div style="position: absolute; height: 33px; width: 1px; border-bottom: 0px solid transparent; top: 518px;"></div>
+                                            <div class="CodeMirror-gutters" style="height: 551px; left: 9.53674e-07px;">
+                                                <div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 29px;"></div>
+                                            </div>
+                                            </div>
+                                            </div>
+                                            <script>
+                                                var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+                                                    mode: "text/html",
+                                                    tabMode: "indent",
+                                                    styleActiveLine: true,
+                                                    lineNumbers: true,
+                                                    lineWrapping: true
+                                                });
+                                            </script>
+                                            </div>
+                                            </div>
+                                            </div>
+                                            <div class="pane" id="preview-pane">
+                                                <div class="outer-wrapper">
+                                                    <span class="hide-preview-pane">&nbsp;</span>
+                                                    <div class="output-area" style="height: 606px;">
+                                                        <iframe id="preview" name="preview" style="height: 606px;" src="./code64_files/saved_resource.html"></iframe>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            </div>
+                                            </div>
+                                            <div class="codelab-footer clearfix">
+                                                <a href="https://www.tutorialrepublic.com/codelab.php?topic=sql&amp;file=select-all" class="switch-mode">Switch to SQL Mode</a>
+                                                <label class="auto-update"><input type="checkbox" id="check"> Auto update</label>
+                                                <script>
+                                                    var delay;
+                                                    var checkbox = document.getElementById("check");
+                                                    editor.on("change", function() {
+                                                        editor.refresh();
+                                                        if (checkbox.checked == true) {
+                                                            clearTimeout(delay);
+                                                            delay = setTimeout(updatePreview, 300); // Don't use parenthesis 
+                                                        }
+                                                    });
+                                                    //setTimeout(updatePreview, 300);
+                                                </script>
+                                                <div class="social-widget-wrapper">
+                                                    <!-- Social widget -->
+                                                    <p class="social-link">Share this example with
+                                                        <a id="facebook-share-btn" href="https://facebook.com/sharer.php?u=https://www.tutorialrepublic.com%2Fcodelab.php%3Ftopic%3Djquery%26file%3Danimate-css-property-with-pre-defined-values" onclick="javascript:window.open(this.href, &#39;&#39;, &#39;menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600,top=150, left=&#39;+((screen.width/2)-300));return false;">Facebook</a>,
+                                                        <a id="twitter-share-btn" href="https://twitter.com/share?text=Example+of+jQuery+Animation+with+Pre-defined+Values+-+&amp;url=https://www.tutorialrepublic.com%2Fcodelab.php%3Ftopic%3Djquery%26file%3Danimate-css-property-with-pre-defined-values" onclick="javascript:window.open(this.href, &#39;&#39;, &#39;menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600,top=150, left=&#39;+((screen.width/2)-300));return false;">Twitter</a>,
+                                                        <a id="google-share-btn" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;su=Example+of+jQuery+Animation+with+Pre-defined+Values&amp;body=https://www.tutorialrepublic.com%2Fcodelab.php%3Ftopic%3Djquery%26file%3Danimate-css-property-with-pre-defined-values"
+                                                            onclick="javascript:window.open(this.href, &#39;&#39;, &#39;menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=438,width=600,top=150, left=&#39;+((screen.width/2)-300));return false;">Gmail</a>.
+                                                        Please give us a
+                                                        <a id="facebook-like-btn" href="https://www.tutorialrepublic.com/like.php" onclick="javascript:window.open(this.href, &#39;&#39;, &#39;menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=250,width=600,top=150, left=&#39;+((screen.width/2)-300));return false;">Like</a>,
+                                                        if you find it helpful.
+                                                    </p>
+                                                    <!-- End:Social widget -->
+                                                </div>
+                                            </div>
+
+                                            <form id="download-form" action="https://www.tutorialrepublic.com/examples/bin/download.php" method="post" class="hidden-form">
+                                                <input type="hidden" id="download-value" name="download-value">
+                                            </form>
+                                            <form id="fullscreen-form" action="https://www.tutorialrepublic.com/examples/fullscreen/output.php" method="post" target="_blank" class="hidden-form">
+                                                <input type="hidden" id="code-value" name="code-value">
+                                            </form>
+
+
+
+
+                                            <ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" style="display: none !important;" data-ad-status="unfilled"><div id="aswift_0_host" tabindex="0" title="Advertisement" aria-label="Advertisement" style="border: none; height: 0px; width: 0px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block;"><iframe id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;border:0;width:undefinedpx;height:undefinedpx;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="./code64_files/ads(1).html" data-google-container-id="a!1" data-load-complete="true"></iframe></div></ins></body>
+<iframe
+    id="google_esf" name="google_esf" src="./code64_files/zrt_lookup.html" style="display: none;"></iframe>
+
+</html>

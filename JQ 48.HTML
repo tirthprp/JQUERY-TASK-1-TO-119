@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#btn1").click(function() {
+                $("#box").animate({
+                    height: "300px"
+                }, 500, function() {
+                    $(this).hide();
+                });
+            });
+            $("#btn2").click(function() {
+                $("#box").animate({
+                    height: "300px"
+                }, 500, function() {
+                    $(this).show();
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <button id="btn1">Hide</button>
+    <button id="btn2">Show</button>
+
+    <div id="box" style="background:#000000;height:300px;width:100px;margin:10px;"></div>
+
+</body>
+
+</html>

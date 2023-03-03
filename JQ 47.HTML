@@ -1,0 +1,25 @@
+
+<html>
+
+<head>
+    <title>jQuery Show/Hide</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#btnHide").click(function() {
+                $("p").hide();
+            });
+            $("#btnShow").click(function() {
+                $("p").show();
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <p>Click "Hide Message" !!</p>
+    <button id="btnHide">Hide Message </button>
+    <button id="btnShow">Show Message</button>
+</body>
+
+</html>
